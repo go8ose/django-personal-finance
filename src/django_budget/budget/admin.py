@@ -20,6 +20,7 @@ class BudgetAdmin(admin.ModelAdmin):
         'slug': ('name',),
     }
     search_fields = ('name',)
+    readonly_fields = ['created', 'updated']
 
 
 class BudgetEstimateAdmin(admin.ModelAdmin):
@@ -34,6 +35,7 @@ class BudgetEstimateAdmin(admin.ModelAdmin):
     )
     list_display = ('category', 'budget', 'amount', 'is_deleted')
     list_filter = ('is_deleted',)
+    readonly_fields = ['created', 'updated']
 
 
 admin.site.register(Budget, BudgetAdmin)

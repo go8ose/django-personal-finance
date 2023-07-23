@@ -13,12 +13,13 @@ class TransactionAdmin(admin.ModelAdmin):
         }),
         ('Metadata', {
             'classes': ('collapse',),
-            'fields': ('created', 'updated', 'is_deleted')
+            'fields': ('created', 'updated', 'is_deleted'),
         })
     )
     list_display = ('notes', 'transaction_type', 'amount', 'date', 'is_deleted')
     list_filter = ('is_deleted',)
     search_fields = ('notes',)
+    readonly_fields = ['created', 'updated']
 
 
 admin.site.register(Transaction, TransactionAdmin)

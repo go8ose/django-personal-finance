@@ -21,6 +21,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'slug': ('name',),
     }
     search_fields = ('name',)
+    readonly_fields = ['created', 'updated']
 
 
 admin.site.register(Category, CategoryAdmin)
