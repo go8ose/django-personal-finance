@@ -17,7 +17,7 @@
 
         <div class="form-actions">
             <button type="submit" class="btn btn-primary">{% trans "Save" %}</button>
-            <a href="{% url 'budget:budget_list' %}" class="btn btn-default">{% trans "Cancel" %}</a>
+            <a href="{% url 'budget-list' %}" class="btn btn-default">{% trans "Cancel" %}</a>
         </div>
     </form>
 </div>
@@ -26,7 +26,7 @@
 
 <p>
     {% trans "You can also" %}
-    <a href="{% url 'budget:estimate_delete' estimate.budget.slug estimate.id %}">{% trans "delete" %}</a>
+    <a href="{% url 'estimate-delete' estimate.budget.slug estimate.id %}">{% trans "delete" %}</a>
     {% trans "this estimate." %}
 </p>
 

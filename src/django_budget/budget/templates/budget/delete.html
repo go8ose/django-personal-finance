@@ -18,7 +18,7 @@
     {% csrf_token %}
 
     <div class="form-actions">
-        <a href="{% url 'budget:budget_list' %}" class="btn btn-default">{% trans "Cancel" %}</a>
+        <a href="{% url 'budget-list' %}" class="btn btn-default">{% trans "Cancel" %}</a>
         <button type="submit" class="btn btn-danger">{% trans "Yes, I'm sure" %}</button>
     </div>
 
